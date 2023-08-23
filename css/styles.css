@@ -634,13 +634,18 @@ body {
   font-size: var(--small-text-size);
   line-height: 1.17;
   letter-spacing: 0.48px;
-  color: var(--accent-color-grey);
+  color: var(--modal-element-transparent-color-grey);
   outline: transparent;
   transition: border-color var(--transition-duration) var(--transition-function);
 }
 
 .order-form-text-field-comment {
   resize: none;
+}
+
+.order-form-text-field-comment:focus,
+.order-form-text-field-comment:focus {
+  border-color: var(--brand-color);
 }
 
 .order-form-text-field-comment::placeholder {
