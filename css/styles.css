@@ -695,19 +695,22 @@ body {
   border: 1px solid var(--modal-element-transparent-color-grey);
   border-radius: 2px;
   outline: 1px solid transparent;
-  transition: outline-color var(--transition-duration)
+  transition: background-color var(--transition-duration)
       var(--transition-function),
-    background-color var(--transition-duration) var(--transition-function),
-    border var(--transition-duration) var(--transition-function);
+    border var(--transition-duration) var(--transition-function),
+    fill var(--transition-duration) var(--transition-function);
 }
 
 .order-form-terms-consent-checkbox:checked
-  + .order-form-terms-custom-checkmark {
+  + .order-form-terms-description
+  > .order-form-terms-custom-checkmark {
   background-color: var(--active-element-color);
   border: none;
 }
 
-.order-form-terms-consent-checkbox:focus + .order-form-terms-custom-checkmark {
+.order-form-terms-consent-checkbox:focus
+  + .order-form-terms-description
+  > .order-form-terms-custom-checkmark {
   outline-color: var(--brand-color);
   outline-offset: 2px;
 }
@@ -720,7 +723,8 @@ body {
 }
 
 .order-form-terms-consent-checkbox:checked
-  + .order-form-terms-custom-checkmark
+  + .order-form-terms-description
+  .order-form-terms-custom-checkmark
   > .order-form-terms-custom-checkmark-icon {
   fill: var(--secondary-accent-color);
 }
