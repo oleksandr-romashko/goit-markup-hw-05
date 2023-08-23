@@ -11,7 +11,6 @@
   --menu-item-color: #2e2f42;
   --hero-bg-color: #2e2f42;
   --title-color: #2e2f42;
-  --modal-window-interactive-element-color: #2e2f42;
   /* SLATE - Text - on design layout color */
   --primary-color-black: #434455;
   /* WHITE - White background - on design layout color */
@@ -29,6 +28,8 @@
   /* Backdrop and Modal window */
   --backdrop-color: rgba(46, 47, 66, 0.4);
   --modal-window-bg: #fcfcfc;
+  --modal-window-element-color-dark: #2e2f42;
+  --modal-element-transparent-color-grey: rgba(46, 47, 66, 0.4);
 
   /*---------  FONT STYLES  ------*/
 
@@ -43,9 +44,11 @@
   --title-text-size: 36px;
   --subtitle-text-size: 20px;
   --logo-text-size: 18px;
+  --modal-form-element-size: 18px;
   --menu-item-text-size: 16px;
   --btn-text-size: 16px;
   --body-text-size: 16px;
+  --small-text-size: 12px;
 
   /* weights */
   --logo-text-weight: 800;
@@ -420,14 +423,16 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0 auto;
+  padding: 72px 24px 24px;
   width: 408px;
-  min-height: 584px;
   border-radius: 4px;
   background-color: var(--modal-window-bg);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   transition: transform var(--transition-duration) var(--transition-function);
 }
+
+/* modal - close button */
 
 .modal-close-btn {
   position: absolute;
@@ -454,18 +459,204 @@ body {
   background-color: var(--active-element-color);
 }
 
+.modal-close-btn:focus {
+  outline: 1px solid var(--brand-color);
+  outline-offset: 2px;
+}
+
 .modal-close-btn-icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  fill: var(--modal-window-interactive-element-color);
+  fill: var(--modal-window-element-color-dark);
   transition: fill var(--transition-duration) var(--transition-function);
 }
 
 .modal-close-btn:hover .modal-close-btn-icon,
 .modal-close-btn:focus .modal-close-btn-icon {
   fill: var(--secondary-color-white);
+}
+
+/* modal - order form - title */
+
+.order-form-title {
+  max-width: 100%;
+  margin-bottom: 16px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--title-color);
+}
+
+/* modal - order form - common styles */
+
+.order-form-interactive-text-element {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--modal-element-transparent-color-grey);
+  font-size: var(--modal-form-element-size);
+  transition: border-color var(--transition-duration) var(--transition-function);
+}
+
+.order-form-interactive-text-element:focus,
+.order-form-interactive-text-element:focus {
+  outline: transparent;
+  border-color: var(--brand-color);
+}
+
+/* modal - order form - common for form field */
+
+.order-form-field {
+  display: block;
+  width: 100%;
+}
+
+.order-form-field-description {
+  margin-bottom: 4px;
+  font-size: var(--small-text-size);
+  line-height: 1.17;
+  letter-spacing: 0.48px;
+  color: var(--accent-color-grey);
+}
+
+/* modal - order form - input */
+
+.order-form-field-username,
+.order-form-field-phone,
+.order-form-field-email {
+  margin-bottom: 8px;
+}
+
+.order-form-input-wrapper {
+  display: block;
+  position: relative;
+}
+
+.order-form-field-input {
+  height: 40px;
+  padding-left: 38px;
+}
+
+.order-form-field-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translate(-50%, -50%);
+  fill: var(--modal-window-element-color-dark);
+  transition: fill var(--transition-duration) var(--transition-function);
+}
+
+.order-form-field-input:focus + .order-form-field-input-icon {
+  fill: var(--brand-color);
+}
+
+/* modal - order form - textarea */
+
+.order-form-field-comment {
+  margin-bottom: 16px;
+}
+
+.order-form-field-textarea {
+  height: 120px;
+  padding: 8px 16px;
+}
+
+.order-form-field-textarea::placeholder {
+  font-size: var(--small-text-size);
+  line-height: 1.17;
+  letter-spacing: 0.48px;
+  color: var(--modal-element-transparent-color-grey);
+}
+
+.order-form-field-textarea {
+  resize: none;
+}
+
+/* modal - order form - terms with checkbox */
+
+.order-form-field-terms {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: var(--small-text-size);
+  line-height: 1.17;
+  letter-spacing: 0.48px;
+  color: var(--accent-color-grey);
+}
+
+.order-form-terms-checkbox {
+  position: absolute;
+  appearance: none;
+}
+
+.order-form-terms-custom-checkmark {
+  cursor: pointer;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  padding: 4px 3px;
+  border: 1px solid var(--modal-element-transparent-color-grey);
+  border-radius: 2px;
+  transition: border var(--transition-duration) var(--transition-function),
+    background-color var(--transition-duration) var(--transition-function);
+}
+
+.order-form-terms-checkbox:checked + .order-form-terms-custom-checkmark {
+  border: none;
+  background-color: var(--active-element-color);
+}
+
+.order-form-terms-checkbox:focus + .order-form-terms-custom-checkmark {
+  outline: 1px solid var(--brand-color);
+  outline-offset: 2px;
+}
+
+.order-form-terms-custom-checkmark-icon {
+  display: block;
+  fill: transparent;
+  transition: fill var(--transition-duration) var(--transition-function);
+}
+
+.order-form-terms-checkbox:checked
+  + .order-form-terms-custom-checkmark
+  > .order-form-terms-custom-checkmark-icon {
+  fill: var(--secondary-accent-color);
+}
+
+.order-form-terms-link {
+  color: var(--brand-color);
+  transition: color var(--transition-duration) var(--transition-function);
+}
+
+.order-form-terms-link:hover,
+.order-form-terms-link:focus {
+  color: var(--active-element-color);
+}
+
+.order-form-terms-link:focus {
+  border-radius: 2px;
+  outline: 1px solid var(--brand-color);
+  outline-offset: 2px;
+}
+
+/* modal - order form - button */
+
+.order-form-btn {
+  display: block;
+  width: 169px;
+  padding: 16px 32px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--transition-duration)
+    var(--transition-function);
+}
+
+.order-form-btn:hover,
+.order-form-btn:focus {
+  background-color: var(--active-element-color);
 }
 
 /*----------  HERO  ----------*/
