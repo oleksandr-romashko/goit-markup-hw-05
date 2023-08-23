@@ -580,30 +580,21 @@ body {
 
 /* modal - order form - common for form field */
 
-.order-form-field {
-  display: block;
-  width: 100%;
-}
-
-.order-form-field-description {
-  margin-bottom: 4px;
-  font-size: var(--small-text-size);
-  line-height: 1.17;
-  letter-spacing: 0.48px;
-  color: var(--accent-color-grey);
-}
-
 /* modal - order form - input */
 
 .order-form-field-wrapper {
   margin-bottom: 8px;
 }
 
-/* .order-form-field-username,
-.order-form-field-phone,
-.order-form-field-email {
-  margin-bottom: 8px;
-} */
+.order-form-field {
+  display: block;
+  width: 100%;
+  margin-bottom: 4px;
+  font-size: var(--small-text-size);
+  line-height: 1.17;
+  letter-spacing: 0.48px;
+  color: var(--accent-color-grey);
+}
 
 .order-form-input-wrapper {
   display: block;

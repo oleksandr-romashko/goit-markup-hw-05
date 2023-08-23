@@ -413,8 +413,8 @@
       <p class="order-form-title">Leave your contacts and we will call you back</p>
       <form class="order-form">
         <div class="order-form-field-wrapper">
-          <label class="order-form-field-username order-form-field">
-            <span class="order-form-field-description">Name</span>
+          <label class="order-form-field">
+            Name
             <span class="order-form-input-wrapper">
               <input class="order-form-field-input order-form-interactive-text-element" type="text" name="user_name"
                 pattern="^\p{L}{2,50}[\s]\p{L}{2,50}$" title="Examples: Jane Doe, Josef Novák, Микола Мельник" required>
@@ -425,10 +425,10 @@
           </label>
         </div>
         <div class="order-form-field-wrapper">
-          <label class="order-form-field-phone order-form-field">
-            <span class="order-form-field-description">Phone</span>
+          <label class="order-form-field" for="user-name">
+            Phone
             <span class="order-form-input-wrapper">
-              <input class="order-form-field-input order-form-interactive-text-element" type="tel"
+              <input id="user-name" class="order-form-field-input order-form-interactive-text-element" type="tel"
                 name="user_contact_phone" pattern="\+[\d]{1,3}\s[\d]{3}\s[\d]{3}\s[\d]{3}"
                 title="Please use international format: +X XXX XXX XXX, +XX XXX XXX XXX, +XXX XXX XXX XXX" required>
               <svg class="order-form-field-input-icon" width="13" height="23">
@@ -438,8 +438,8 @@
           </label>
         </div>
         <div class="order-form-field-wrapper">
-          <label class="order-form-field-email order-form-field">
-            <span class="order-form-field-description">Email</span>
+          <label class="order-form-field">
+            Email
             <span class="order-form-input-wrapper">
               <input class="order-form-field-input order-form-interactive-text-element" type="email"
                 name="user_contact_email" required>
@@ -450,10 +450,10 @@
           </label>
         </div>
         <div class="order-form-field-wrapper">
-          <label class="order-form-field-comment order-form-field">
+          <label class="order-form-field-comment order-form-field" for="user-comment">
             <span class="order-form-field-description">Comment</span>
-            <textarea class="order-form-field-textarea order-form-interactive-text-element" name="user_message"
-              placeholder="Text input"></textarea>
+            <textarea id="user-comment" class="order-form-field-textarea order-form-interactive-text-element"
+              name="user_message" placeholder="Text input"></textarea>
           </label>
         </div>
         <div class="order-form-field-wrapper">
