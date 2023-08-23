@@ -660,19 +660,23 @@ body {
   color: var(--modal-element-transparent-color-grey);
 }
 
-/* modal - order form - terms and conditions */
+/* modal - order form - terms and conditions with checkbox */
 
 .order-form-terms-consent-wrapper {
   margin-bottom: 24px;
 }
 
 .order-form-terms-description {
-  display: block;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   font-size: var(--small-text-size);
   line-height: 1.17;
   letter-spacing: 0.48px;
   color: var(--accent-color-grey);
 }
+
+/* checkmark */
 
 /* TODO: use this statement instead of "visually-hidden" class to hide element */
 /* .order-form-terms-consent-checkbox {
@@ -688,36 +692,40 @@ body {
   margin-right: 8px;
   width: 16px;
   height: 16px;
-  padding: 4px 3px;
   border: 1px solid var(--modal-element-transparent-color-grey);
   border-radius: 2px;
-  fill: transparent;
-  transition: background-color var(--transition-duration)
+  outline: 1px solid transparent;
+  transition: outline-color var(--transition-duration)
       var(--transition-function),
+    background-color var(--transition-duration) var(--transition-function),
     border var(--transition-duration) var(--transition-function);
 }
 
 .order-form-terms-consent-checkbox:checked
   + .order-form-terms-custom-checkmark {
-  border: none;
   background-color: var(--active-element-color);
+  border: none;
 }
 
 .order-form-terms-consent-checkbox:focus + .order-form-terms-custom-checkmark {
-  outline: 1px solid var(--brand-color);
+  outline-color: var(--brand-color);
   outline-offset: 2px;
 }
 
+/* checkmark icon */
+
 .order-form-terms-custom-checkmark-icon {
-  width: 10px;
-  height: 8px;
+  fill: transparent;
   transition: fill var(--transition-duration) var(--transition-function);
 }
 
 .order-form-terms-consent-checkbox:checked
-  + .order-form-terms-custom-checkmark {
-  background-color: var(--secondary-accent-color);
+  + .order-form-terms-custom-checkmark
+  > .order-form-terms-custom-checkmark-icon {
+  fill: var(--secondary-accent-color);
 }
+
+/* Privacy Policy link */
 
 .order-form-privacy-policy-link {
   color: var(--brand-color);
@@ -739,7 +747,7 @@ body {
 
 .order-form-btn {
   display: block;
-  width: 169px;
+  min-width: 169px;
   padding: 16px 32px;
   margin-left: auto;
   margin-right: auto;

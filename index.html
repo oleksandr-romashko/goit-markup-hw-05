@@ -457,16 +457,16 @@
 
         <div class="order-form-terms-consent-wrapper">
           <!-- TODO: use this statement instead of "visually-hidden" class to hide element -->
-          <input class="order-form-terms-consent-checkbox visually-hidden" id="user-privacy" type="checkbox"
-            name="user-privacy" value="true" required>
-          <label class="order-form-terms-description" for="user-privacy">
+          <label class="order-form-terms-description">
+            <input class="order-form-terms-consent-checkbox visually-hidden" type="checkbox" name="user-privacy"
+              value="true" required>
             <span class="order-form-terms-custom-checkmark">
               <svg class="order-form-terms-custom-checkmark-icon" width="10" height="8">
                 <use href="./images/icons.svg#icon-checkmark"></use>
               </svg>
             </span>
-            I accept the terms and conditions of the&nbsp;<a href="" class="order-form-privacy-policy-link"
-              target="_blank">Privacy Policy</a>
+            <span>I accept the terms and conditions of the&nbsp;</span>
+            <a href="" class="order-form-privacy-policy-link" target="_blank">Privacy Policy</a>
           </label>
         </div>
         <button class="order-form-btn basic-btn" type="submit">Send</button>
