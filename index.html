@@ -384,21 +384,21 @@
           </li>
         </ul>
       </div>
-      <form class="footer-subscribe-form">
-        <label class="footer-subscribe-form-field">
-          <span class="footer-subscribe-form-title">Subscribe</span>
-          <input class="footer-subscribe-form-input" type="email" name="user_subscribe_email" placeholder="E-mail"
-            required>
-        </label>
-        <div class="footer-subscribe-btn-wrapper">
+      <div class="footer-subscribe-form-container">
+        <p class="footer-subscribe-form-title">Subscribe</p>
+        <form class="footer-subscribe-form">
+          <label class="footer-subscribe-form-field">
+            <input class="footer-subscribe-form-input" type="email" name="user_subscribe_email" placeholder="E-mail"
+              required>
+          </label>
           <button class="footer-subscribe-btn basic-btn" type="submit">
             Subscribe
+            <svg class="footer-subscribe-btn-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-subscribe"></use>
+            </svg>
           </button>
-          <svg class="footer-subscribe-btn-icon" width="24" height="20">
-            <use href="./images/icons.svg#icon-subscribe"></use>
-          </svg>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </footer>
 
