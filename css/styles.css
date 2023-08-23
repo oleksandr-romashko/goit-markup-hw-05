@@ -589,9 +589,11 @@ body {
   color: var(--accent-color-grey);
 }
 
-/* modal - order form - input */
+/* modal - order form - text input */
 
-.order-form-field-wrapper {
+.order-form-user-name-field-wrapper,
+.order-form-user-phone-field-wrapper,
+.order-form-user-email-field-wrapper {
   margin-bottom: 8px;
 }
 
@@ -600,12 +602,12 @@ body {
   position: relative;
 }
 
-.order-form-field-input {
+.order-form-text-field-input {
   height: 40px;
   padding-left: 38px;
 }
 
-.order-form-field-input-icon {
+.order-form-text-field-icon {
   position: absolute;
   top: 50%;
   left: 16px;
@@ -614,45 +616,48 @@ body {
   transition: fill var(--transition-duration) var(--transition-function);
 }
 
-.order-form-field-input:focus + .order-form-field-input-icon {
+.order-form-text-field-input:focus + .order-form-text-field-icon {
   fill: var(--brand-color);
 }
 
-/* modal - order form - textarea */
+/* modal - order form - text comment */
 
-.order-form-field-comment {
+.order-form-user-comment-field-wrapper {
   margin-bottom: 16px;
 }
 
-.order-form-field-textarea {
+.order-form-text-field-comment {
   height: 120px;
   padding: 8px 16px;
 }
 
-.order-form-field-textarea::placeholder {
+.order-form-text-field-comment {
+  resize: none;
+}
+
+.order-form-text-field-comment::placeholder {
   font-size: var(--small-text-size);
   line-height: 1.17;
   letter-spacing: 0.48px;
   color: var(--modal-element-transparent-color-grey);
 }
 
-.order-form-field-textarea {
-  resize: none;
-}
+/* modal - order form - terms and conditions */
 
-/* modal - order form - terms with checkbox */
+.order-form-terms-consent-wrapper {
+  margin-bottom: 24px;
+}
 
 .order-form-field-terms {
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
   font-size: var(--small-text-size);
   line-height: 1.17;
   letter-spacing: 0.48px;
   color: var(--accent-color-grey);
 }
 
-.order-form-terms-checkbox {
+.order-form-terms-consent-checkbox {
   position: absolute;
   appearance: none;
 }
@@ -670,12 +675,13 @@ body {
     background-color var(--transition-duration) var(--transition-function);
 }
 
-.order-form-terms-checkbox:checked + .order-form-terms-custom-checkmark {
+.order-form-terms-consent-checkbox:checked
+  + .order-form-terms-custom-checkmark {
   border: none;
   background-color: var(--active-element-color);
 }
 
-.order-form-terms-checkbox:focus + .order-form-terms-custom-checkmark {
+.order-form-terms-consent-checkbox:focus + .order-form-terms-custom-checkmark {
   outline: 1px solid var(--brand-color);
   outline-offset: 2px;
 }
@@ -686,23 +692,23 @@ body {
   transition: fill var(--transition-duration) var(--transition-function);
 }
 
-.order-form-terms-checkbox:checked
+.order-form-terms-consent-checkbox:checked
   + .order-form-terms-custom-checkmark
   > .order-form-terms-custom-checkmark-icon {
   fill: var(--secondary-accent-color);
 }
 
-.order-form-terms-link {
+.order-form-privacy-policy-link {
   color: var(--brand-color);
   transition: color var(--transition-duration) var(--transition-function);
 }
 
-.order-form-terms-link:hover,
-.order-form-terms-link:focus {
+.order-form-privacy-policy-link:hover,
+.order-form-privacy-policy-link:focus {
   color: var(--active-element-color);
 }
 
-.order-form-terms-link:focus {
+.order-form-privacy-policy-link:focus {
   border-radius: 2px;
   outline: 1px solid var(--brand-color);
   outline-offset: 2px;
