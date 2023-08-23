@@ -595,11 +595,15 @@ body {
 
 /* modal - order form - input */
 
-.order-form-field-username,
+.order-form-field-wrapper {
+  margin-bottom: 8px;
+}
+
+/* .order-form-field-username,
 .order-form-field-phone,
 .order-form-field-email {
   margin-bottom: 8px;
-}
+} */
 
 .order-form-input-wrapper {
   display: block;
