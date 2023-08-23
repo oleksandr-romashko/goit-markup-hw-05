@@ -30,6 +30,8 @@
   --modal-window-bg: #fcfcfc;
   --modal-window-element-color-dark: #2e2f42;
   --modal-element-transparent-color-grey: rgba(46, 47, 66, 0.4);
+  /* Backdrop and Modal window */
+  --subscribe-input-bg-color: #2e2f42;
 
   /*---------  FONT STYLES  ------*/
 
@@ -44,7 +46,7 @@
   --title-text-size: 36px;
   --subtitle-text-size: 20px;
   --logo-text-size: 18px;
-  --modal-form-element-size: 18px;
+  --form-element-text-size: 18px;
   --menu-item-text-size: 16px;
   --btn-text-size: 16px;
   --body-text-size: 16px;
@@ -344,6 +346,8 @@ body {
 =            FOOTER                           =
 =============================================*/
 
+/* text */
+
 .page-footer {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -373,6 +377,8 @@ body {
   color: var(--secondary-accent-color);
 }
 
+/* socia media */
+
 .footer-social-media-title {
   margin-bottom: 16px;
   font-size: 16px;
@@ -391,8 +397,81 @@ body {
   background-color: var(--accent-color-green);
 }
 
+/* subscribe form */
+
+.footer-subscribe-form {
+  display: flex;
+  margin-left: auto;
+  max-width: 453px;
+  gap: 24px;
+}
+
+.footer-subscribe-form-title {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--secondary-color-white);
+}
+
+.footer-subscribe-form-input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--secondary-color-white);
+  background-color: var(--subscribe-input-bg-color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  font-size: var(--form-element-text-size);
+  color: var(--secondary-color-white);
+  transition: border-color var(--transition-duration) var(--transition-function);
+}
+
+.footer-subscribe-form-input::placeholder {
+  font-size: var(--small-text-size);
+  line-height: 2;
+  letter-spacing: 0.48px;
+  color: var(--secondary-color-white);
+}
+
+.footer-subscribe-form-input:focus,
+.footer-subscribe-form-input:focus {
+  outline: transparent;
+  border-color: var(--brand-color);
+}
+
+.footer-subscribe-btn-wrapper {
+  align-self: flex-end;
+  position: relative;
+  width: 165px;
+  height: 40px;
+}
+
+.footer-subscribe-btn {
+  width: 100%;
+  height: 100%;
+  padding: 8px 64px 8px 24px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--transition-duration)
+    var(--transition-function);
+}
+
+.footer-subscribe-btn:hover,
+.footer-subscribe-btn:focus {
+  background-color: var(--active-element-color);
+}
+
+.footer-subscribe-btn-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 24px;
+  fill: var(--secondary-color-white);
+}
+
 /*=============================================
-=            MAIN PAGE CONTENT                =
+=            MODAL WINDOW                     =
 =============================================*/
 
 /*---------  BACKDROP  ---------*/
@@ -494,7 +573,7 @@ body {
   width: 100%;
   border-radius: 4px;
   border: 1px solid var(--modal-element-transparent-color-grey);
-  font-size: var(--modal-form-element-size);
+  font-size: var(--form-element-text-size);
   transition: border-color var(--transition-duration) var(--transition-function);
 }
 
@@ -658,6 +737,10 @@ body {
 .order-form-btn:focus {
   background-color: var(--active-element-color);
 }
+
+/*=============================================
+=            MAIN PAGE CONTENT                =
+=============================================*/
 
 /*----------  HERO  ----------*/
 
