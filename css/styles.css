@@ -666,9 +666,8 @@ body {
   margin-bottom: 24px;
 }
 
-.order-form-field-terms {
-  display: flex;
-  align-items: center;
+.order-form-terms-description {
+  display: block;
   font-size: var(--small-text-size);
   line-height: 1.17;
   letter-spacing: 0.48px;
@@ -682,16 +681,20 @@ body {
 } */
 
 .order-form-terms-custom-checkmark {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  display: inline-block;
+  margin-right: 8px;
   width: 16px;
   height: 16px;
-  margin-right: 8px;
   padding: 4px 3px;
   border: 1px solid var(--modal-element-transparent-color-grey);
   border-radius: 2px;
-  transition: border var(--transition-duration) var(--transition-function),
-    background-color var(--transition-duration) var(--transition-function);
+  fill: transparent;
+  transition: background-color var(--transition-duration)
+      var(--transition-function),
+    border var(--transition-duration) var(--transition-function);
 }
 
 .order-form-terms-consent-checkbox:checked
@@ -706,15 +709,14 @@ body {
 }
 
 .order-form-terms-custom-checkmark-icon {
-  display: block;
-  fill: transparent;
+  width: 10px;
+  height: 8px;
   transition: fill var(--transition-duration) var(--transition-function);
 }
 
 .order-form-terms-consent-checkbox:checked
-  + .order-form-terms-custom-checkmark
-  > .order-form-terms-custom-checkmark-icon {
-  fill: var(--secondary-accent-color);
+  + .order-form-terms-custom-checkmark {
+  background-color: var(--secondary-accent-color);
 }
 
 .order-form-privacy-policy-link {
