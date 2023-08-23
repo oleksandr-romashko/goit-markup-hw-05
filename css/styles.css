@@ -432,6 +432,10 @@ body {
   transition: border-color var(--transition-duration) var(--transition-function);
 }
 
+.footer-subscribe-form-input::placeholder {
+  color: var(--secondary-color-white);
+}
+
 .footer-subscribe-form-input:focus,
 .footer-subscribe-form-input:focus {
   outline: transparent;
