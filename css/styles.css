@@ -667,9 +667,7 @@ body {
 }
 
 .order-form-terms-description {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  display: block;
   font-size: var(--small-text-size);
   line-height: 1.17;
   letter-spacing: 0.48px;
@@ -694,6 +692,7 @@ body {
   height: 16px;
   border: 1px solid var(--modal-element-transparent-color-grey);
   border-radius: 2px;
+  fill: transparent;
   outline: 1px solid transparent;
   transition: background-color var(--transition-duration)
       var(--transition-function),
@@ -706,6 +705,7 @@ body {
   > .order-form-terms-custom-checkmark {
   background-color: var(--active-element-color);
   border: none;
+  fill: var(--secondary-accent-color);
 }
 
 .order-form-terms-consent-checkbox:focus
