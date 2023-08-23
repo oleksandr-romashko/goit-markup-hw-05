@@ -624,6 +624,11 @@ body {
   margin-bottom: 16px;
 }
 
+/* TODO: now element is using ::placeholder styles as main text
+   TODO: replace styles with same as for other fields
+   TODO: similarly add "order-form-interactive-text-element" class
+   TODO: leave height and padding only 
+ */
 .order-form-text-field-comment {
   height: 120px;
   padding: 8px 16px;
@@ -670,10 +675,11 @@ body {
   color: var(--accent-color-grey);
 }
 
-.order-form-terms-consent-checkbox {
+/* TODO: use this statement instead of "visually-hidden" class to hide element */
+/* .order-form-terms-consent-checkbox {
   position: absolute;
   appearance: none;
-}
+} */
 
 .order-form-terms-custom-checkmark {
   cursor: pointer;

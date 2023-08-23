@@ -450,14 +450,16 @@
 
         <div class="order-form-user-comment-field-wrapper">
           <label class="order-form-field-description" for="user-comment">Comment</label>
+          <!-- TODO: replace styles with same as for other fields -->
           <textarea class="order-form-text-field-comment" id="user-comment" name="user-comment"
             placeholder="Text input"></textarea>
         </div>
 
         <div class="order-form-terms-consent-wrapper">
-          <label class="order-form-field-terms">
-            <input class="order-form-terms-consent-checkbox" type="checkbox"
-              name="user_accepted_terms_and_conditions_status" value="accepted" required>
+          <!-- TODO: use this statement instead of "visually-hidden" class to hide element -->
+          <input class="order-form-terms-consent-checkbox visually-hidden" id="user-privacy" type="checkbox"
+            name="user-privacy" value="true" required>
+          <label class="order-form-field-terms" for="user-privacy">
             <span class="order-form-terms-custom-checkmark">
               <svg class="order-form-terms-custom-checkmark-icon" width="10" height="8">
                 <use href="./images/icons.svg#icon-checkmark"></use>
